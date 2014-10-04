@@ -18,7 +18,7 @@ end
 execute "Extracting and Building a-blog cms from Source" do
   command <<-EOS
     unzip -q #{acms['version']}install.zip
-    mv #{acms['version']}install/ablogcms #{acms['path']}
+    mv ablogcms1.4.2/ablogcms #{acms['path']}
   EOS
   cwd Chef::Config['file_cache_path']
   not_if "test -d #{acms['path']}"
