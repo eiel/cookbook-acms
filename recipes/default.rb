@@ -13,3 +13,7 @@ include_recipe %w{ php php::module_mysql php::module_gd }
 
 package 'unzip'
 include_recipe %w{ acms::ioncube acms::database}
+
+web_app "acms" do
+  docroot acms['path']
+end
